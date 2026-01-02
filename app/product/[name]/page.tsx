@@ -104,8 +104,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               <div className="border-t border-gray-200 pt-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-3">Product Details</h2>
-                <div className="flex gap-4 items-start">
-                  <div className="w-full max-w-[300px] bg-slate-200 rounded-lg overflow-hidden shrink-0">
+                <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                  <div className="w-2/3 md:w-full md:max-w-[300px] bg-slate-200 rounded-lg overflow-hidden shrink-0">
                     <Image
                       src="/plush-int.jpg"
                       alt="Interior plush detail"
