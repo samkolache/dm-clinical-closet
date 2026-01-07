@@ -100,6 +100,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="border-t border-gray-200 pt-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-3">Description</h2>
                 <p className="text-gray-600 leading-relaxed">{product.description}</p>
+                <p className="text-gray-600 font-bold underline leading-relaxed">Online payment is not available yet. If you would like to purchase, contact Dawson or Malik with your size and order. Payments accepted include Zelle, Venmo, or Cashapp</p>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
@@ -114,14 +115,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                  <p className="text-gray-600 leading-relaxed">Comfy interior is available with all merch</p>
+                  <p className="text-gray-600 leading-relaxed">Comfy, plush interior is available with all merch</p>
                 </div>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
-                <button className="w-full bg-gray-700 text-white px-8 py-3 text-base font-bold rounded hover:bg-gray-600 transition-colors">
-                  Add to Cart
-                </button>
+                
               </div>
             </div>
           </div>
