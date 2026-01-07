@@ -13,6 +13,9 @@ export default function Navbar() {
 
   return (
     <nav className="">
+      <div className='bg-gray-100 flex justify-center py-2 '>
+        <p className='text-xs'>HOWARD <span className='font-bold'> DENTAL </span> MERCH NOW AVAILABLE</p>
+      </div>
       <div className="px-5 py-6 flex justify-between items-center">
         {/* Hamburger menu button - visible only on mobile */}
         <button 
