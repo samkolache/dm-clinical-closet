@@ -100,7 +100,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="border-t border-gray-200 pt-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-3">Description</h2>
                 <p className="text-gray-600 leading-relaxed">{product.description}</p>
-                <p className="text-gray-600 font-bold underline leading-relaxed">Online payment is not available yet. If you would like to purchase, contact Dawson or Malik with your size and order. Payments accepted include Zelle, Venmo, or Cashapp</p>
+                <p className="text-gray-600 font-bold underline leading-relaxed">Online payment is not available yet. If you would like to purchase, contact Dawson or Malik with your size and order. Payments accepted include Zelle, Venmo, Cashapp, or Cash</p>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
