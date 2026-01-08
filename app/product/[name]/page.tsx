@@ -77,7 +77,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
             {/* Product Image */}
-            <div className="flex items-start justify-center">
+            <div className="flex flex-col items-start justify-center">
               <div className="w-full max-w-[550px] bg-slate-200 rounded-lg overflow-hidden">
                 <Image
                   src={product.imageSrc}
@@ -87,6 +87,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   className="w-full h-auto"
                   priority
                 />
+              </div>
+              <div className="w-full max-w-[550px] mt-4">
+                <h3 className="text-md font-semibold text-gray-900 mb-2 text-center">Sizes available</h3>
+                <div className="flex gap-4 justify-center">
+                  <span className=" text-gray-700">S</span>
+                  <span className=" text-gray-700">M</span>
+                  <span className=" text-gray-700">L</span>
+                  <span className=" text-gray-700">XL</span>
+                  <span className=" text-gray-700">XXL</span>
+                </div>
+                <p className="text-sm text-gray-600 text-center mt-2">Limited stock depending on your size. Get your exclusive merch ASAP.</p>
               </div>
             </div>
 
@@ -99,8 +110,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               <div className="border-t border-gray-200 pt-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-3">Description</h2>
-                <p className="text-gray-600 leading-relaxed">{product.description}</p>
-                <p className="text-gray-600 font-bold underline leading-relaxed">Online payment is not available yet. If you would like to purchase, contact Dawson or Malik with your size and order. Payments accepted include Zelle, Venmo, Cashapp, or Cash</p>
+                <p className="text-gray-600 font-bold  leading-relaxed mb-2">
+                  Online payment coming soon. If you would like to purchase now, contact us with size, design, and
+                  how you are going to pay.
+                </p>
+                <p className="text-gray-600 font-bold  leading-relaxed mb-1">
+                  Payments accepted include:
+                </p>
+                <div className="text-gray-600 font-bold  leading-relaxed">
+                  <p>- Electronic payments (Zelle, etc.)</p>
+                  <p>- Cash</p>
+                </div>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
@@ -115,7 +135,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                  <p className="text-gray-600 leading-relaxed">Comfy, plush interior is available with all merch</p>
+                  <p className="text-gray-600 leading-relaxed font-bold">Comfy, plush interior is available with all merch</p>
                 </div>
               </div>
 
