@@ -9,36 +9,41 @@ interface ProductPageProps {
 }
 
 // Product data mapping
-const productData: { [key: string]: { imageSrc: string; title: string; price: number; description: string } } = {
+const productData: { [key: string]: { imageSrc: string; title: string; price: number; description: string; checkoutUrl: string } } = {
   'howard-dental-sweatshirt-black': {
     imageSrc: '/basic-sweatshirt_standardized.jpg',
     title: 'Howard Dental Sweatshirt (black)',
     price: 45,
-    description: 'Classic black sweatshirt featuring the Howard Dental logo. Perfect for everyday wear and showing your school spirit.'
+    description: 'Classic black sweatshirt featuring the Howard Dental logo. Perfect for everyday wear and showing your school spirit.',
+    checkoutUrl: 'https://d-m-clinical-closet.myshopify.com/products/howard-dental-sweatshirt-black?variant=47720563900657'
   },
   'howard-dental-sweatshirt-blue': {
     imageSrc: '/hu-sweatshirt_standardized.jpg',
     title: 'Howard Dental Sweatshirt (blue)',
     price: 45,
-    description: 'Vibrant blue sweatshirt with Howard Dental branding. Comfortable and stylish for any occasion.'
+    description: 'Vibrant blue sweatshirt with Howard Dental branding. Comfortable and stylish for any occasion.',
+    checkoutUrl: 'https://d-m-clinical-closet.myshopify.com/products/howard-dental-sweatshirt-blue?variant=47720565539057'
   },
   'howard-dental-sweatshirt-embroidered': {
     imageSrc: '/nice-sweatshirt_standardized.jpg',
     title: 'Howard Dental Sweatshirt (EMBROIDERED)',
     price: 55,
-    description: 'Premium sweatshirt featuring high-quality embroidered Howard Dental logo. Elevated style with superior craftsmanship.'
+    description: 'Premium sweatshirt featuring high-quality embroidered Howard Dental logo. Elevated style with superior craftsmanship.',
+    checkoutUrl: 'https://d-m-clinical-closet.myshopify.com/products/howard-dental-sweatshirt-embroidered?variant=47720566423793'
   },
   'howard-dental-bison-hoodie-black': {
     imageSrc: '/bull-hoodie_standardized.jpg',
     title: 'Howard Dental Bison Hoodie (black)',
     price: 55,
-    description: 'Bold black hoodie featuring the iconic Howard Bison mascot. Stay warm while representing Howard Dental.'
+    description: 'Bold black hoodie featuring the iconic Howard Bison mascot. Stay warm while representing Howard Dental.',
+    checkoutUrl: 'https://d-m-clinical-closet.myshopify.com/products/howard-dental-bison-hoodie-black?variant=47720567472369'
   },
   'howard-dental-tooth-hoodie-grey': {
     imageSrc: '/tooth-hoodie_standardized.jpg',
     title: 'Howard Dental Tooth Hoodie (grey)',
     price: 55,
-    description: 'Unique grey hoodie with creative tooth design. Perfect for dental students and professionals.'
+    description: 'Unique grey hoodie with creative tooth design. Perfect for dental students and professionals.',
+    checkoutUrl: 'https://d-m-clinical-closet.myshopify.com/products/howard-dental-tooth-hoodie-grey?variant=47720568422641'
   }
 };
 
@@ -97,7 +102,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   <span className=" text-gray-700">XL</span>
                   <span className=" text-gray-700">XXL</span>
                 </div>
-                <p className="text-sm text-gray-600 text-center mt-2">Limited stock depending on your size. Get your exclusive merch ASAP.</p>
+                <div className="mt-4 flex justify-center">
+                  <a
+                    href={product.checkoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-700 text-white px-8 py-3 text-sm font-bold rounded hover:bg-gray-600 transition-colors inline-block"
+                  >
+                    Checkout
+                  </a>
+                </div>
               </div>
             </div>
 
